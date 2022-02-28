@@ -1,5 +1,7 @@
 package com.example.android.mycustomview;
 
+import static android.graphics.BlendMode.COLOR;
+
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -70,7 +72,8 @@ public class ShapeSelectorView extends View implements ValueAnimator.AnimatorUpd
         p.setColor(getResources().getColor(R.color.light));
 
         mAnimator = new ValueAnimator();
-        mAnimator.setDuration(5000);
+        mAnimator.setDuration(2000);
+        mAnimator.setRepeatCount(ValueAnimator.INFINITE);
         mAnimator.setInterpolator(new AccelerateInterpolator());
         mAnimator.addUpdateListener(this);
 
@@ -84,10 +87,6 @@ public class ShapeSelectorView extends View implements ValueAnimator.AnimatorUpd
     public void onAnimationUpdate(ValueAnimator animation) {
         // Get our interpolated float from the animation
         mAnimatingFraction = animation.getAnimatedFraction();
-        if (mAnimatingFraction >= 0.8f) {
-            animation.pause();
-            animation.start();
-        }
         invalidate();
     }
 
@@ -200,14 +199,23 @@ public class ShapeSelectorView extends View implements ValueAnimator.AnimatorUpd
 
     private void drawSpinner(Canvas canvas, float xStartPos, float yStart,
                              float rectHeight) {
-        // Log.d("Animation", String.valueOf(mAnimatingFraction));
-        canvas.drawCircle(xStartPos, yStart, 0.3f * rectHeight, needle);
-        canvas.drawArc(xStartPos - 0.3f * rectHeight,
-                yStart - 0.3f * rectHeight,
-                xStartPos + 0.3f * rectHeight,
-                yStart + 0.3f * rectHeight,
-                -90f, 450f * mAnimatingFraction, true,
-                paintShape);
+        float radius = 0.3f * rectHeight;
+        RectF oval = new RectF(xStartPos - radius, yStart - radius,
+                xStartPos + radius, yStart + radius);
+
+        canvas.drawCircle(xStartPos, yStart,
+                    0.3f * rectHeight, needle);
+        float startAngle = -90f + 360f * mAnimatingFraction;
+        float endAngle = 90f + 360f * mAnimatingFraction;
+        canvas.drawArc(oval, startAngle, 90f, true, paintShape);
+
+//        canvas.drawArc(xStartPos - 0.3f * rectHeight,
+//                yStart - 0.3f * rectHeight,
+//                xStartPos + 0.3f * rectHeight,
+//                yStart + 0.3f * rectHeight,
+//                startAngle, 50f, true,
+//                paintShape);
+
         canvas.drawCircle(xStartPos, yStart, 0.25f * rectHeight, paintShape);
 
     }

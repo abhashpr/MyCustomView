@@ -4,7 +4,9 @@ package com.example.android.mycustomview;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.shapes.Shape;
 import android.os.Bundle;
 import android.os.ConditionVariable;
@@ -20,8 +22,9 @@ import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView startCamera;
+    private ImageView startCamera, launchDashboard;
     private ShapeSelectorView ssView;
+    private Activity dashboard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +41,16 @@ public class MainActivity extends AppCompatActivity {
                 ssView.vitals.put("bpm", 67f);
                 ssView.postInvalidate();
             }
-
         });
+        Intent intent = new Intent(this, Dashboard.class);
+        launchDashboard = findViewById(R.id.dashboardImageView);
 
+        launchDashboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intent);
+            }
+        });
 
 // Generate random number each time view is rendered
 // final int min = 60;
