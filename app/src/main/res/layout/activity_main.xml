@@ -34,7 +34,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="0dp"
             card_view:displayShapeName="true"
-            card_view:shapeColor="#9731D6F3" />
+            card_view:shapeColor="#BC60D2EA" />
 
     </RelativeLayout>
 

@@ -18,14 +18,24 @@
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.19583333333333333" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_baseline_videocam_24.xml" value="0.19583333333333333" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_blood_pressure.xml" value="0.10416666666666667" />
+        <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_blood_pressure_active.xml" value="0.19583333333333333" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_heart_beat_signal.xml" value="0.10416666666666667" />
+        <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_heart_beat_signal_inactive.xml" value="0.19583333333333333" />
+        <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_heart_rate_variability_selector_active.xml" value="0.10364583333333334" />
+        <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_heart_rate_variability_selector_inactive.xml" value="0.1814814814814815" />
+        <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_heartbeatSelector_active.xml" value="0.18020833333333333" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19583333333333333" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_monitor_heart_black_24dp.xml" value="0.10416666666666667" />
+        <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_monitor_heart_inactive.xml" value="0.10364583333333334" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_outline_arrow_back_ios_24.xml" value="0.11614583333333334" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_outline_menu_24.xml" value="0.10416666666666667" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_respiration_rate.xml" value="0.19583333333333333" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_spo2_24dp.xml" value="0.11614583333333334" />
+        <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_spo2_selector_active.xml" value="0.10364583333333334" />
+        <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_spo2_selector_inactive.xml" value="0.10364583333333334" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_stress_index_24dp.xml" value="0.11614583333333334" />
+        <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_stress_index_selector_active.xml" value="0.10364583333333334" />
+        <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_stress_index_selector_inactive.xml" value="0.10364583333333334" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/icon_background.xml" value="0.19583333333333333" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/layered_list.xml" value="0.15364583333333334" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/rounded_button.xml" value="0.19583333333333333" />

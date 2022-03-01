@@ -29,7 +29,9 @@ public class MyGraph extends View implements ValueAnimator.AnimatorUpdateListene
     private int getGraphBaseThicknessInPx = 5;
 
     private float mPadding = 20;
-    private float[] data = {10f, 20f, 35f, 45f, 80f, 85f, 90f, 20f, 30f, 10f, 45f, 10f, 20f, 35f, 45f, 80f, 85f, 90f, 20f, 30f, 10f, 45f};
+    private float[] data = {10f, 20f, 25f, 30f, 35f, 55f, 70f, 80f, 67f, 55f, 33f, 21f, 5f,
+            5f, 10f, 15f, 20f, 35f, 55f, 45f, 43f, 34f, 29f, 15f, 5f, 2f,
+            2f, 5f, 8f, 10f, 17f, 26f, 21f, 19f, 16f, 13f, 8f, 2f, 1f,};
     private int dataCount = data.length;
 
     private ValueAnimator mAnimator;
