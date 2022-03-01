@@ -30,6 +30,8 @@
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_outline_arrow_back_ios_24.xml" value="0.11614583333333334" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_outline_menu_24.xml" value="0.10416666666666667" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_respiration_rate.xml" value="0.19583333333333333" />
+        <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_respiration_rate_selector_active.xml" value="0.11458333333333333" />
+        <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_respiration_rate_selector_inactive.xml" value="0.11458333333333333" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_spo2_24dp.xml" value="0.11614583333333334" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_spo2_selector_active.xml" value="0.10364583333333334" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/ic_spo2_selector_inactive.xml" value="0.10364583333333334" />
@@ -43,6 +45,7 @@
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/drawable/underline.xml" value="0.12368421052631579" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/layout/dashboard.xml" value="0.1796875" />
+        <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/layout/main_toolbar.xml" value="0.16041666666666668" />
         <entry key="..\:/Abhash/android/MyCustomView/app/src/main/res/layout/toolbar.xml" value="0.1796875" />
       </map>
     </option>

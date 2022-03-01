@@ -7,10 +7,16 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 
+import java.util.Random;
+
 public class MyGraph extends View implements ValueAnimator.AnimatorUpdateListener {
+
+    private final int GRAPH_ANIMATION_DURATION = 500;
+
     private Paint mBarPaint;
     private Paint mGridPaint;
     private Paint mGuidelinePaint;
@@ -30,12 +36,13 @@ public class MyGraph extends View implements ValueAnimator.AnimatorUpdateListene
 
     private float mPadding = 20;
     private float[] data = {10f, 20f, 25f, 30f, 35f, 55f, 70f, 80f, 67f, 55f, 33f, 21f, 5f,
-            5f, 10f, 15f, 20f, 35f, 55f, 45f, 43f, 34f, 29f, 15f, 5f, 2f,
-            2f, 5f, 8f, 10f, 17f, 26f, 21f, 19f, 16f, 13f, 8f, 2f, 1f,};
+            5f, 10f, 15f, 20f, 35f, 55f, 45f, 43f, 34f, 29f, 15f};
     private int dataCount = data.length;
 
     private ValueAnimator mAnimator;
     private float mAnimatingFraction;
+
+    private Random r = new Random();
 
     public MyGraph(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -65,9 +72,13 @@ public class MyGraph extends View implements ValueAnimator.AnimatorUpdateListene
         mGridBaseAxis.setStrokeWidth(getGraphBaseThicknessInPx);
 
         mAnimator = new ValueAnimator();
-        mAnimator.setDuration(1000);
+        mAnimator.setDuration(GRAPH_ANIMATION_DURATION);
         mAnimator.setInterpolator(new AccelerateInterpolator());
         mAnimator.addUpdateListener(this);
+
+        for (int i = 0; i < data.length; i++) {
+            data[i] = 0f + r.nextFloat() * (89f - 0f);
+        }
 
         mAnimator.setFloatValues(0f, 1f);
         mAnimator.start();
@@ -80,8 +91,18 @@ public class MyGraph extends View implements ValueAnimator.AnimatorUpdateListene
         invalidate();
     }
 
+    public void setParameter() {
+        for (int i = 0; i < data.length; i++) {
+            data[i] = 0f + r.nextFloat() * (99f - 0f);
+        }
+
+        mAnimator.setFloatValues(0f, 1f);
+        mAnimator.start();
+    }
+
     @Override
     protected void onDraw(Canvas canvas) {
+
         final int height = getHeight();
         final int width = getWidth();
         final float gridLeft = mPadding;
@@ -135,6 +156,4 @@ public class MyGraph extends View implements ValueAnimator.AnimatorUpdateListene
             counter++;
         }
     }
-
-
 }
